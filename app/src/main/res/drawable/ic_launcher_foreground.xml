@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Glowing outer sensor target ring -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="2.5"
+        android:pathData="M54,28 A26,26 0 1,0 54,80 A26,26 0 1,0 54,28" />
+
+    <!-- Neon Pink sensor pulse waveform -->
+    <path
+        android:strokeColor="#FF0055"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M30,54 L42,54 L47,38 L52,70 L57,44 L61,60 L65,54 L78,54" />
+
+    <!-- Center cyan core dot -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M54,54m-3,0a3,3 0 1,0 6,0a3,3 0 1,0 -6,0" />
+</vector>

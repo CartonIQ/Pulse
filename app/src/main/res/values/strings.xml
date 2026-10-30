@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Identity -->
+    <string name="app_name">Pulse</string>
+    <string name="app_full_name">Pulse — Ultimate Sensor Toolbox</string>
+    <string name="app_tagline">Turn your phone into a sci-fi tricorder.</string>
+    <string name="brand_credit">CartonIQ Engineering</string>
+
+    <!-- Navigation & Titles -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_metal">Magnetic Monitor</string>
+    <string name="nav_vibration">Vibration Meter</string>
+    <string name="nav_light">Light Meter</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_diagnostics">Sensor Diagnostics</string>
+    <string name="action_back">Back</string>
+    <string name="action_settings">Open Settings</string>
+    <string name="action_diagnostics">Open Diagnostics</string>
+
+    <!-- Sensor Statuses -->
+    <string name="status_available">SENSOR ONLINE</string>
+    <string name="status_unavailable">SENSOR UNAVAILABLE</string>
+    <string name="status_active">MONITORING ACTIVE</string>
+    <string name="status_paused">MONITORING PAUSED</string>
+    <string name="status_waiting">WAITING FOR SENSOR DATA…</string>
+    <string name="status_uncalibrated">ACCURACY: UNCALIBRATED</string>
+    <string name="status_low_accuracy">ACCURACY: LOW</string>
+    <string name="status_med_accuracy">ACCURACY: MEDIUM</string>
+    <string name="status_high_accuracy">ACCURACY: HIGH</string>
+
+    <!-- Controls & Actions -->
+    <string name="btn_pause">Pause</string>
+    <string name="btn_resume">Resume</string>
+    <string name="btn_reset_peak">Reset Peak</string>
+    <string name="btn_zero_baseline">Set Baseline</string>
+    <string name="btn_clear_baseline">Clear Baseline</string>
+    <string name="btn_calibrate">Calibrate</string>
+    <string name="btn_test_alert">Test Tone</string>
+    <string name="btn_dismiss">Dismiss</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_reset_defaults">Reset All Preferences</string>
+    <string name="btn_retry">Retry</string>
+    <string name="btn_manage_privacy">Ad Consent &amp; Privacy</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_header_tag">QUANTUM SENSOR SUITE</string>
+    <string name="dashboard_title">TRICORDER HUD</string>
+    <string name="dashboard_status_summary">3 CORE SENSORS CONFIGURED</string>
+    <string name="card_metal_title">Magnetic Field / Metal Proximity</string>
+    <string name="card_metal_desc">3-axis geomagnetic field flux &amp; ferromagnetic proximity detection.</string>
+    <string name="card_vibration_title">Vibration &amp; Seismic Motion</string>
+    <string name="card_vibration_desc">Dynamic acceleration, seismic oscillations, and shock G-force.</string>
+    <string name="card_light_title">Ambient Illuminance</string>
+    <string name="card_light_desc">Photometric light levels, indoor vs outdoor lux bracket analysis.</string>
+
+    <!-- Metal / Magnetic Screen -->
+    <string name="metal_screen_title">MAGNETIC FLUX DETECTOR</string>
+    <string name="metal_screen_subtitle">TYPE_MAGNETIC_FIELD MONITOR</string>
+    <string name="metal_disclaimer">Discloses geomagnetic field variations. Ferromagnetic metals (iron, nickel, steel) disrupt magnetic field lines. Non-ferrous metals (pure copper, aluminum, gold) will not produce significant deflection.</string>
+    <string name="metal_magnitude_label">TOTAL FIELD INTENSITY</string>
+    <string name="metal_deviation_label">BASELINE DEVIATION (Δ)</string>
+    <string name="metal_peak_label">PEAK MAGNITUDE</string>
+    <string name="metal_baseline_label">CALIBRATED BASELINE</string>
+    <string name="metal_threshold_label">ALERT THRESHOLD</string>
+    <string name="metal_axis_breakdown">3-AXIS VECTOR COMPONENTS</string>
+    <string name="metal_calibration_guide">Calibration Hint: Rotate phone in a smooth figure-8 motion in all three dimensions to calibrate internal magnetometer coils.</string>
+    <string name="unit_microtesla">µT</string>
+
+    <!-- Vibration Screen -->
+    <string name="vibration_screen_title">SEISMIC VIBRATION METER</string>
+    <string name="vibration_screen_subtitle">ACCELEROMETER MOTION ANALYSIS</string>
+    <string name="vibration_disclaimer">Distinguishes dynamic vibration from Earth gravity. Earth gravity (~9.81 m/s² / 1.0 g) is separated using real-time gravity filtration.</string>
+    <string name="vibration_dynamic_mag_label">DYNAMIC ACCELERATION</string>
+    <string name="vibration_gforce_label">DYNAMIC G-FORCE</string>
+    <string name="vibration_total_mag_label">TOTAL ACCELERATION (RAW)</string>
+    <string name="vibration_peak_label">PEAK VIBRATION</string>
+    <string name="vibration_avg_label">AVERAGE OSCILLATION</string>
+    <string name="vibration_mode_dynamic">Dynamic (Gravity Removed)</string>
+    <string name="vibration_mode_raw">Raw (Includes Gravity)</string>
+    <string name="vibration_sensor_source_linear">Sensor: Hardware Linear Acceleration</string>
+    <string name="vibration_sensor_source_filtered">Sensor: Low-Pass Filtered Accelerometer</string>
+    <string name="vibration_waveform_title">REAL-TIME OSCILLATION WAVEFORM (120 SAMPLES)</string>
+    <string name="unit_mps2">m/s²</string>
+    <string name="unit_g">g</string>
+
+    <!-- Light Meter Screen -->
+    <string name="light_screen_title">PHOTOMETRIC LIGHT METER</string>
+    <string name="light_screen_subtitle">TYPE_LIGHT ILLUMINANCE MONITOR</string>
+    <string name="light_disclaimer">Photocell sensor is located near front camera/earpiece. Phone cases, angles, and screen protectors may attenuate light collection.</string>
+    <string name="light_current_label">AMBIENT ILLUMINANCE</string>
+    <string name="light_min_label">MINIMUM LUX</string>
+    <string name="light_max_label">MAXIMUM LUX</string>
+    <string name="light_category_label">ENVIRONMENT BRACKET</string>
+    <string name="unit_lux">lx</string>
+
+    <!-- Light Brackets -->
+    <string name="lux_extreme_darkness">Extreme Darkness (&lt; 1 lx)</string>
+    <string name="lux_dim_interior">Dim Interior / Twilight (1 – 50 lx)</string>
+    <string name="lux_normal_indoor">Living Room / Normal Indoor (50 – 500 lx)</string>
+    <string name="lux_bright_office">Bright Workspace / Studio (500 – 1,000 lx)</string>
+    <string name="lux_overcast_day">Overcast Daylight / Outdoor Shade (1,000 – 10,000 lx)</string>
+    <string name="lux_direct_sunlight">Direct High-Sunlight (&gt; 10,000 lx)</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">SYSTEM CONFIGURATION</string>
+    <string name="settings_group_alerts">Audio &amp; Haptic Alerts</string>
+    <string name="settings_sound_title">Audio Alert Beep</string>
+    <string name="settings_sound_desc">Play short frequency beep when peak threshold is exceeded.</string>
+    <string name="settings_haptic_title">Haptic Vibration Alert</string>
+    <string name="settings_haptic_desc">Tactile buzz when sensor readings cross alert limit.</string>
+    <string name="settings_group_thresholds">Sensor Thresholds</string>
+    <string name="settings_magnetic_threshold">Magnetic Alarm Limit (%1$.0f µT)</string>
+    <string name="settings_vibration_threshold">Vibration Alarm Limit (%1$.1f m/s²)</string>
+    <string name="settings_group_sampling">Sensor Polling Rate</string>
+    <string name="settings_rate_normal">Normal (Battery Saver - SENSOR_DELAY_NORMAL)</string>
+    <string name="settings_rate_game">Fast / Game (High Precision - SENSOR_DELAY_GAME)</string>
+    <string name="settings_group_reset">Reset Preferences</string>
+    <string name="settings_reset_confirm_title">Reset all preferences?</string>
+    <string name="settings_reset_confirm_message">This restores default alert limits, sound toggles, and sampling rates.</string>
+    <string name="settings_privacy_note">AdMob &amp; UMP operate with privacy consent. No personal sensor data leaves this device.</string>
+
+    <!-- Diagnostics Screen -->
+    <string name="diagnostics_title">HARDWARE SENSOR DIAGNOSTICS</string>
+    <string name="diagnostics_header">DETECTED HARDWARE BUS</string>
+    <string name="diagnostics_count_format">Total Device Sensors Detected: %1$d</string>
+    <string name="sensor_vendor_format">Vendor: %1$s | Version: %2$d</string>
+    <string name="sensor_power_format">Power: %1$.2f mA | Range: %2$.1f | Resolution: %3$.4f</string>
+    <string name="sensor_not_found_on_device">Sensor not present in device hardware</string>
+    <string name="diagnostics_core_header">CORE SENSOR HEALTH CHECK</string>
+
+    <!-- Error & Missing Sensor States -->
+    <string name="error_sensor_missing_title">Hardware Sensor Missing</string>
+    <string name="error_sensor_missing_body">Your Android device does not have a hardware %1$s. Pulse does not synthesize fake data.</string>
+    <string name="error_sensor_listener_failed">Could not bind listener to hardware sensor.</string>
+
+    <!-- Ads & Offline Notice -->
+    <string name="ad_container_label">Advertisement Region</string>
+    <string name="ad_offline_notice">Offline mode active — ads suppressed. Core sensors 100% operational.</string>
+</resources>

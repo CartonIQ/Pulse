@@ -1,104 +1,90 @@
-# Pulse — Ultimate Sensor Toolbox
+# 🧲 Pulse - Ultimate Hardware Sensor Toolbox
 
-> **Turn your phone into a sci-fi tricorder.**  
-> Package: `com.cartoniq.pulse` | Brand: CartonIQ  
-> Stack: Kotlin 2.0.21 • Android Gradle Plugin 8.7.3 • Gradle 8.9 • Jetpack Compose Material 3  
-> SDK Target: `compileSdk 34` | `targetSdk 34` | `minSdk 24` | Java/JVM 17
+![Kotlin](https://img.shields.io/badge/Kotlin-2.0.21-blue.svg?style=for-the-badge&logo=kotlin)
+![Android](https://img.shields.io/badge/Android-API%2024%2B-green.svg?style=for-the-badge&logo=android)
+![Compose](https://img.shields.io/badge/Jetpack%20Compose-UI-orange.svg?style=for-the-badge&logo=jetpack-compose)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
----
+**Pulse** turns your Android phone into a pocket scientific instrument. It is a premium, 100% offline hardware sensor utility app that gives you real-time data from the physical world. 
 
-## 🛰️ Overview
-
-Pulse is a premium, offline-first Android sensor utility that transforms hardware sensors into an approachable, high-precision measurement toolkit with a polished sci-fi instrument aesthetic.
-
-### Release 1 Core Tools:
-1. **Magnetic Flux Detector (`TYPE_MAGNETIC_FIELD`)**:
-   - 3-axis geomagnetic field monitoring ($X, Y, Z$) and Euclidean magnitude ($\mu\text{T}$).
-   - Analog gauge instrument with animated needle damping.
-   - Dynamic baseline calibration ($\Delta\mu\text{T}$ deviation) and peak hold.
-   - Throttled audio tone alerts and tactile haptic feedback when crossing user-configurable threshold.
-   - Transparent disclosure: distinguishes magnetic flux disruptions from universal metal detection (ferromagnetic metals disrupt lines; non-ferrous metals like gold/pure copper do not).
-2. **Seismic Vibration Meter (`TYPE_ACCELEROMETER` / `TYPE_LINEAR_ACCELERATION`)**:
-   - Real-time rolling 120-sample oscilloscope waveform graph.
-   - Low-pass gravity separation filter isolating dynamic vibration oscillations from static $1.0\text{g}$ Earth gravity.
-   - Dual-readout in $\text{m/s}^2$ and standard $\text{g}$-force ($\div 9.80665$).
-   - Peak hold and rolling average acceleration.
-3. **Photometric Light Meter (`TYPE_LIGHT`)**:
-   - Real-time illuminance in lux ($\text{lx}$).
-   - Animated solar radial visualizer with intensity-scaled dynamic corona and rotating rays.
-   - Environmental classification brackets (Extreme Darkness, Dim Interior, Normal Indoor, Bright Office, Overcast Daylight, Direct Sunlight).
-   - Minimum and maximum lux tracking.
-4. **Sensor Diagnostics & Configuration**:
-   - Live hardware bus discovery listing all device sensors with vendor, power draw ($\text{mA}$), resolution, and maximum range.
-   - User preferences: audio beeps, haptics, threshold limits, sampling rate (Normal vs Game).
-   - Google UMP privacy consent form integration.
+No accounts. No cloud. No sensor data leaves your device. Just pure hardware magic.
 
 ---
 
-## 📱 How to Build in Termux on Android Phone
+## 🌟 What can you do with Pulse?
 
-Pulse was engineered specifically for developers who build and package Android APKs directly on their ARM Android device using Termux.
+Pulse isn't just a toy; it's a practical tool used across many fields:
 
-### Prerequisites (Termux):
-```bash
-pkg update -y
-pkg install -y openjdk-17 git android-tools
-```
-
-### Build Steps:
-1. Extract or clone `Pulse/` to your Termux home directory:
-   ```bash
-   cd ~/Pulse
-   ```
-2. Make `gradlew` and `termux-build.sh` executable:
-   ```bash
-   chmod +x gradlew termux-build.sh
-   ```
-3. Run the automated build script:
-   ```bash
-   ./termux-build.sh
-   ```
-   Or invoke Gradle directly:
-   ```bash
-   ./gradlew clean assembleDebug
-   ```
-
-4. Once the build finishes, install the APK directly on your phone:
-   ```bash
-   termux-open app/build/outputs/apk/debug/app-debug.apk
-   ```
+*   **🧰 DIY & Home Improvement:** Locate studs, metal pipes, and hidden screws in drywall before drilling. Find dropped metal parts on a dark carpet.
+*   **🔬 Mechanics & 3D Printing:** Place your phone on a washing machine, engine block, or 3D printer bed to diagnose excessive vibration, loose bolts, or bearing wear.
+*   **💡 Lighting & Plants:** Measure exact Lux levels to find the perfect spot for houseplants, optimize desk lighting for eye health, or prepare a photography location.
+*   **🎓 STEM Education:** Demonstrate magnetic fields, gravity separation, and 3D vector physics in real-time for science projects.
+*   **📱 Hardware Testing:** Buying a used phone? Check if the magnetometer, accelerometer, or light sensor is broken.
 
 ---
 
-## 💻 How to Build in Android Studio
+## ✨ Core Features
 
-1. Open Android Studio (Ladybug 2024.2.1 or newer recommended).
-2. Select **File -> Open...** and navigate to the `Pulse/` folder.
-3. Let Gradle sync dependencies (Gradle 8.9 + AGP 8.7.3 + Kotlin 2.0.21).
-4. Run `assembleDebug` or press the **Run** button to launch on your connected phone or emulator.
+### 1. 🧲 Magnetic Flux Detector (Metal Detector)
+*   Uses the `TYPE_MAGNETIC_FIELD` sensor.
+*   Displays 3-axis vector components (X, Y, Z).
+*   Features a beautiful analog gauge with a needle that spikes near ferromagnetic metals (iron, steel, nickel).
+*   Includes a real-time baseline calibration system.
 
----
+### 2. 📳 Seismic Vibration Meter
+*   Uses the `TYPE_LINEAR_ACCELERATION` sensor.
+*   Shows a real-time oscillating waveform graph (120 samples).
+*   Calculates Peak Vibration, Average Oscillation, and exact G-force.
+*   Filters out Earth's gravity (~9.81 m/s²) for accurate dynamic movement tracking.
 
-## 🧪 Unit Tests
-
-Run the domain calculation verification test suite:
-```bash
-./gradlew testDebugUnitTest
-```
-Tests verify:
-- `MT-01`: Pythagorean 3D vector magnitude calculations.
-- `VT-01`: Standard $\text{g}$-force conversion ($9.80665\text{ m/s}^2 = 1.0\text{g}$).
-- `VT-02`: Gravity filter convergence to zero dynamic acceleration at rest.
-- `LT-01`: Environmental lux classification boundaries.
-- Threshold limit crossing and baseline deviation logic.
+### 3. 💡 Photometric Light Meter
+*   Uses the `TYPE_LIGHT` sensor.
+*   Measures ambient light in Lux (lx).
+*   Features a dynamic glowing sun icon that scales with brightness.
+*   Shows an "Environment Bracket" (e.g., Living Room, Direct Sun) based on the current Lux reading.
 
 ---
 
-## 🔒 Privacy & Monetization Configuration
+## 🛠️ Tech Stack & Architecture
 
-- **Zero Unnecessary Permissions**: Only `INTERNET` (strictly for AdMob/UMP) and `VIBRATE` (for tactile feedback). No location, contacts, camera, or microphone permissions.
-- **Offline Guarantee**: Sensor acquisition, calculations, and UI are 100% offline. Network connectivity failure never blocks sensor tools.
-- **Official Google AdMob Test IDs**:
-  - Sample App ID: `ca-app-pub-3940256099942544~3347511713`
-  - Fixed Banner Ad Unit: `ca-app-pub-3940256099942544/6300978111`
-  - Anchored Adaptive Banner Ad Unit: `ca-app-pub-3940256099942544/9214589741`
+*   **Language:** Kotlin
+*   **UI Framework:** Jetpack Compose (Material 3)
+*   **Architecture:** MVVM + Clean Architecture
+*   **Hardware Integration:** Android `SensorManager` with `DisposableEffect` to prevent battery drain in the background.
+*   **Custom UI Components:** Built from scratch using Compose `Canvas` (Analog Gauge, Waveform Chart, Lux Sun).
+*   **Monetization:** Google AdMob & UMP (User Messaging Platform) for EU consent compliance.
+*   **Min SDK:** 24 (Android 7.0) | **Target SDK:** 34 (Android 14)
+
+---
+
+## 🚀 Installation & Build
+
+To build this project locally using **Android Studio** or **Termux**:
+
+1. Clone the repository:
+   `git clone https://github.com/CartonIQ/Pulse.git`
+2. Open the project in Android Studio.
+3. Sync Gradle and build the APK.
+
+*(Note: The project requires a `pulse.jks` keystore to build the release version. Do not commit your keystore to GitHub!)*
+
+---
+
+## 🔒 Privacy Policy
+
+Pulse is built with privacy as a priority. 
+*   **100% Offline:** The app does not require an internet connection to function.
+*   **No Data Collection:** We do not collect, store, or share any sensor data, location data, or personal information.
+*   **Ads:** We use Google AdMob to display a single banner ad. AdMob may collect your device's advertising ID to serve personalized ads.
+
+---
+
+## 👨‍💻 Developer
+
+**Mohd Arsh (CartoniQ)**
+*   GitHub: [@CartonIQ](https://github.com/CartonIQ)
+*   Android App Developer | Kotlin | Java | Termux 🚀
+
+## ⚖️ License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
